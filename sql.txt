@@ -12,3 +12,9 @@ CREATE  TABLE if not exists `employee` (
   `email` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+Insert into `employee` values (1,'Abhay','Tiwari','iabhayt@gmail.com'),
+							(2,'Rajan','Tiwari','rajan@gmail.com'),
+							(3,'Aditya','Pandey','adipandey@gmail.com'),
+                            (4,'Shree','Tiwari','shree@gmail.com'),
+                            (5,'Babu','Lal','babu@yahoo.com');
