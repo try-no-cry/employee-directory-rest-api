@@ -1,8 +1,9 @@
-package com.employee.directory.EmployeeDirectory.Rest;
+package com.employee.directory.EmployeeDirectory.Controller;
 
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +26,7 @@ public class EmployeeRestController {
 	@GetMapping("/")
 	public String hi()
 	{
-		return "Hi";
+		return "helloworld";
 	}
 	
 	@GetMapping("/employees")
@@ -33,6 +34,13 @@ public class EmployeeRestController {
 	{
 		System.out.println("Inside List<Employee> findAllEmployees()");
 		return employeeService.findAll();
+	}
+	
+	@GetMapping("/list")
+	public String listEmployees(Model model)
+	{
+		model.addAttribute("employees",employeeService.findAll());
+		return "list-employees";
 	}
 	
 	@GetMapping("/employees/{employeeId}")
