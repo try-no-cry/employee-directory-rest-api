@@ -39,6 +39,7 @@ public class EmployeeRestController {
 	@GetMapping("/list")
 	public String listEmployees(Model model)
 	{
+		System.out.println("Inside listEmployees(Model model)");
 		model.addAttribute("employees",employeeService.findAll());
 		return "list-employees";
 	}
