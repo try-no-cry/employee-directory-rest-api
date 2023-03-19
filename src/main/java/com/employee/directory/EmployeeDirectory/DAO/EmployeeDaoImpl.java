@@ -1,9 +1,11 @@
-package com.employee.directory.EmployeeDirectory.Entity;
+package com.employee.directory.EmployeeDirectory.DAO;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import com.employee.directory.EmployeeDirectory.Entity.Employee;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
