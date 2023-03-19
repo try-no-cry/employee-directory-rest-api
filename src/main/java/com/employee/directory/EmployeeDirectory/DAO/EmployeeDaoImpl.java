@@ -25,9 +25,9 @@ public class EmployeeDaoImpl implements EmployeeDAO {
 
 	//save or update
 	@Override
-	public void save(Employee employee) {
+	public Employee save(Employee employee) {
 		// TODO Auto-generated method stub
-		entityManager.merge(employee);
+		return entityManager.merge(employee);
 		
 	}
 

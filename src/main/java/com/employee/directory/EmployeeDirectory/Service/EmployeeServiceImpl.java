@@ -24,9 +24,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	@Transactional
-	public void save(Employee employee) {
+	public Employee save(Employee employee) {
 		// TODO Auto-generated method stub
-		employeeDao.save(employee);
+		return employeeDao.save(employee);
 		
 	}
 
@@ -41,6 +41,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public void deleteById(int id) {
 		// TODO Auto-generated method stub
 		employeeDao.deleteById(id);
-	}
+		
+ 	}
 
 }
