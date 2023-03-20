@@ -3,6 +3,7 @@ package com.employee.directory.EmployeeDirectory.Controller;
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.employee.directory.EmployeeDirectory.Entity.Employee;
 import com.employee.directory.EmployeeDirectory.Service.EmployeeService;
 
-@RestController
+//@RestController rest controller when apia
+/// when thymeleaf use controller
+@Controller
 @RequestMapping("/api")
 public class EmployeeRestController {
 	
