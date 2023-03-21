@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
  
 import com.employee.directory.EmployeeDirectory.Entity.Employee;
@@ -65,6 +66,19 @@ public class EmployeeRestController {
 		return emp;
 	}
 	
+	@GetMapping("/showFormForUpdate")
+	public String updateEmployeeFormData(@RequestParam("employeeId") int employeeId,Model model)
+	{
+		Employee emp=employeeService.findEmployeeById(employeeId);
+		
+		model.addAttribute(emp);
+		
+		return "employees/addEmployeeForm";
+		
+		
+		
+	}
+	
 	@PostMapping("/")
 	public Employee addEmployee(@RequestBody Employee employee)
 	{
@@ -78,7 +92,6 @@ public class EmployeeRestController {
 	@PostMapping("/save")
 	public String saveEmployeeFormData(@ModelAttribute("employee") Employee employee)
 	{
-		employee.setId(0);// putting id 0 incase someone has already provided id....now it will create new emp
 		Employee emp=employeeService.save(employee);
 		
 		return "redirect:/employees/";
