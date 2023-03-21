@@ -44,4 +44,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
  	}
 
+	@Override
+	public List<Employee> findAllSortedByLastName() {
+		// TODO Auto-generated method stub
+		return employeeDao.findAllSortedByLastName();
+	}
+
 }

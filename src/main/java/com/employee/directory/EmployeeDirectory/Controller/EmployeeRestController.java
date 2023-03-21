@@ -45,7 +45,8 @@ public class EmployeeRestController {
 	public String listEmployees(Model model)
 	{
 		System.out.println("Inside listEmployees(Model model)");
-		model.addAttribute("employees",employeeService.findAll());
+//		model.addAttribute("employees",employeeService.findAll());
+		model.addAttribute("employees",employeeService.findAllSortedByLastName());
 		return "employees/list-employees";
 	}
 	

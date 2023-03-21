@@ -22,6 +22,14 @@ public class EmployeeDaoImpl implements EmployeeDAO {
 		TypedQuery<Employee> query=entityManager.createQuery("FROM Employee",Employee.class);
 		return query.getResultList();
 	}
+	
+	//sort by lastname
+	@Override
+	public List<Employee> findAllSortedByLastName() {
+		// TODO Auto-generated method stub
+		TypedQuery<Employee> query=entityManager.createQuery("FROM Employee order by lastName asc",Employee.class);
+		return query.getResultList();
+	}
 
 	//save or update
 	@Override

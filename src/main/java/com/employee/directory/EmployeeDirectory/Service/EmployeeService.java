@@ -10,5 +10,6 @@ public interface EmployeeService {
 	Employee  save(Employee employee);
 	Employee  findEmployeeById(int id);
 	void  deleteById(int id);
+	List<Employee> findAllSortedByLastName();
 
 }
