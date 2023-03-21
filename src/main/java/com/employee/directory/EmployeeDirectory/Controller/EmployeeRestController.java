@@ -79,6 +79,18 @@ public class EmployeeRestController {
 		
 	}
 	
+	@GetMapping("/deleteEmployeeData")
+	public String deleteEmployeeDataFromForm(@RequestParam("employeeId") int employeeId)
+	{
+		Employee emp=employeeService.findEmployeeById(employeeId);
+		
+		 
+	 
+		employeeService.deleteById(employeeId);
+		
+		return "redirect:/employees/";
+	}
+	
 	@PostMapping("/")
 	public Employee addEmployee(@RequestBody Employee employee)
 	{
@@ -97,6 +109,7 @@ public class EmployeeRestController {
 		return "redirect:/employees/";
 		
 	}
+	
 	
 	
 	
