@@ -32,6 +32,7 @@ public class EmployeeRestController {
 	public String hi(Model model)
 	{
 		model.addAttribute("theDate",new Date());
+		model.addAttribute("time",System.currentTimeMillis());
 		return "helloworld";
 	}
 	
