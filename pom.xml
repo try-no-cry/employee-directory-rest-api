@@ -59,6 +59,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		
+		<finalName>employee-repository-api</finalName>
 	</build>
 
 </project>
