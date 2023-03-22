@@ -61,6 +61,7 @@
 		</plugins>
 		
 		<finalName>employee-repository-api</finalName>
+		<defaultGoal>package</defaultGoal>
 	</build>
 
 </project>
